@@ -79,15 +79,8 @@ WSGI_APPLICATION = 'ebdjango.wsgi.application'
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        #'OPTIONS': {
-        #    'options': '-c search_path=mymedicalpal'
-        #},
-        #'NAME': 'mymedicalpal',
-        #'USER': 'django',
-        #'PASSWORD': 'django',
-        #'HOST': 'localhost',
-        #'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
