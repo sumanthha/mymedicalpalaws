@@ -18,12 +18,11 @@ from django.conf.urls.static import static
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
-from main.views import login_view
 urlpatterns = [
-   url(r'^admin/', admin.site.urls),
-   url(r'^login/$', login_view, name='login'),
+   #url(r'^admin/', admin.site.urls),
+   #url(r'^login/$', login_view, name='login'),
    #url(r'^login/$', auth_views.LoginView, name='login'),
-   url('accounts/', include('django.contrib.auth.urls')),
+   #url('accounts/', include('django.contrib.auth.urls')),
    #path('accounts/', include('django.contrib.auth.urls')),
    #url(r'^login/$', auth_views.LoginView, name='login'),
    #url(r'^logout/$', auth_views.LogoutView, name='logout'),
