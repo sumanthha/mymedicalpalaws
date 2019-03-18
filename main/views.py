@@ -24,5 +24,19 @@ class LoginPageView(TemplateView):
             # Return an 'invalid login' error message.
             pass
 
+class SignUpPageView(TemplateView):
+    def get(self, request, **kwargs):
+        return render(request, 'signup.html', context=None)
+
+    def post(self, request, **kwargs):
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            # Redirect to a success page.
+        else:
+            # Return an 'invalid login' error message.
+            pass
 def logout_view(request):
     logout(request)

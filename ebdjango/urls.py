@@ -27,4 +27,5 @@ urlpatterns = [
    #url(r'^login/$', auth_views.LoginView, name='login'),
    #url(r'^logout/$', auth_views.LogoutView, name='logout'),
    url(r'^', include('main.urls')),
+   url('', include('social_django.urls', namespace='social'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
