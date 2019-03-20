@@ -1,6 +1,6 @@
 Django==1.11.18
 gunicorn==19.7.1
-requests=2.21.0
-python-social=3.1.0
-social-core=3.1.0
-social-app-django=3.1.0
+requests==2.21.0
+python-social==3.1.0
+social-core==3.1.0
+social-app-django==3.1.0
