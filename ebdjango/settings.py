@@ -80,13 +80,14 @@ WSGI_APPLICATION = 'ebdjango.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-}'''
+}
+'''
 
 DATABASES = {
     'default': {
@@ -95,13 +96,29 @@ DATABASES = {
         #    'options': '-c search_path=mymedicalpal'
         #},
         'NAME': 'mymedicalpal',
-        'USER': 'django',
-        'PASSWORD': 'django',
+        'USER': 'postgres',
+        'PASSWORD': 'admin',
         'HOST': 'localhost',
         'PORT': '5432',
     }
 }
-
+'''
+'''
+#google
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #'OPTIONS': {
+        #    'options': '-c search_path=mymedicalpal'
+        #},
+        'NAME': 'mymedicalpaldb',
+        'USER': 'postgres',
+        'PASSWORD': 'admin',
+        'HOST': '35.194.28.39',
+        'PORT': '5432',
+    }
+}
+'''
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
